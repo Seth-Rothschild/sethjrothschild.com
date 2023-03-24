@@ -1,6 +1,6 @@
 <head>
 	<link
-		href="http://fonts.googleapis.com/css?family=Lato:400,700"
+		href="http://fonts.googleapis.com/css?family=Lato:300,300"
 		rel="stylesheet"
 		type="text/css"
 	/>
@@ -47,11 +47,13 @@
 
 <style>
 	body {
-		font-family: 'Lato';
+		font-family: Lato, sans-serif;
+        font-weight: 300;
 	}
 	h1 {
 		font-size: 45pt;
-		line-height: 1.2;
+		line-height: 1.1;
+        letter-spacing: 2px;
 		font-weight: 300;
 		text-align: center;
 	}
