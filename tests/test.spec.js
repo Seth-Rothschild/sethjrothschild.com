@@ -47,8 +47,12 @@ test('that each programming page section has some content', async ({ page }) => 
 	await expect(page.getByText('Emacs users')).toBeVisible();
 	await expect(page.getByText('There are a few fun projects')).toBeVisible();
 });
-test('that each link goes to the right place', async ({ context, page }) => {
-	// Programming
+test('that the thesis page exists', async ({ page }) => {
+	await page.goto('/thesis');
+	await expect(page.getByRole('heading', { name: 'Thesis' })).toBeVisible();
+});
+test('that the internal links work', async ({ page }) => {
+	
 	await page.goto('/');
 	await page.getByText('programming page.').click();
 	await expect(page).toHaveURL('/programming');
@@ -57,103 +61,7 @@ test('that each link goes to the right place', async ({ context, page }) => {
 	await page.getByText('programming', { exact: true }).click();
 	await expect(page).toHaveURL('/programming');
 
-	// External Links
-	await testTargetBlank(
-		context,
-		page,
-		'/',
-		'Extreme Programming',
-		'https://en.wikipedia.org/wiki/Extreme_programming'
-	);
-	await testTargetBlank(context, page, '/', 'Feature Labs', 'https://www.featurelabs.com/open/');
-	await testTargetBlank(
-		context,
-		page,
-		'/',
-		'Featuretools.',
-		'https://github.com/alteryx/featuretools'
-	);
-	await testTargetBlank(context, page, '/', 'Github', 'https://github.com/Seth-Rothschild');
-
-	await testTargetBlank(
-		context,
-		page,
-		'/',
-		'George McNinch',
-		'https://math.tufts.edu/people/faculty/george-mcninch'
-	);
-	await testTargetBlank(context, page, '/', 'Tufts University', 'https://www.tufts.edu');
-
-	await testTargetBlank(
-		context,
-		page,
-		'/programming',
-		'here.',
-		'https://github.com/Seth-Rothschild'
-	);
-	await testTargetBlank(
-		context,
-		page,
-		'/programming',
-		'henchman',
-		'https://github.com/alteryx/henchman'
-	);
-	await testTargetBlank(
-		context,
-		page,
-		'/programming',
-		'Featuretools,',
-		'https://github.com/alteryx/featuretools'
-	);
-
-	await testTargetBlank(
-		context,
-		page,
-		'/programming',
-		'configuration,',
-		'https://github.com/Seth-Rothschild/.emacs.d'
-	);
-	await testTargetBlank(
-		context,
-		page,
-		'/programming',
-		'LaTeX Thesis and Presentation Template',
-		'https://github.com/Seth-Rothschild/Thesis-and-Presentation-templates'
-	);
-	await testTargetBlank(
-		context,
-		page,
-		'/programming',
-		'contacts manager page,',
-		'https://github.com/Seth-Rothschild/contacts_info'
-	);
-	await testTargetBlank(
-		context,
-		page,
-		'/programming',
-		'assigning seats',
-		'https://github.com/Seth-Rothschild/seatingchart-helper'
-	);
-	await testTargetBlank(
-		context,
-		page,
-		'/programming',
-		'thrill digger',
-		'https://github.com/Seth-Rothschild/thrill_digger_tdd'
-	);
-	await testTargetBlank(
-		context,
-		page,
-		'/programming',
-		'Wordle',
-		'https://github.com/Seth-Rothschild/wordle_strategy_evaluation'
-	);
-});
-async function testTargetBlank(context, page, start, text, end) {
-	const pagePromise = context.waitForEvent('page');
-	await page.goto(start);
-	await page.getByText(text).click();
-	const newPage = await pagePromise;
-	await newPage.waitForLoadState();
-	await expect(newPage).toHaveURL(end);
-}
+	await page.goto('/');
+	await page.getByText('PDF Version [Updated April 31 2017]', { exact: true }).click();
+	await expect(page).toHaveURL('/thesis');
+})

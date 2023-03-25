@@ -23,9 +23,9 @@
 			target="_blank"
 			rel="noopener noreferrer">configuration,</a
 		>
-		which is fairly readable. Included there is a substantial conditional hydra for keyboard
-		navigation as well as a few "common sense" modifications which might be of interest to new
-		users. Of use to math graduate students at Tufts is my
+		which is fairly readable. Included there is a substantial conditional hydra for keyboard navigation
+		as well as a few "common sense" modifications which might be of interest to new users. Of use to
+		math graduate students at Tufts is my
 		<a
 			href="https://github.com/Seth-Rothschild/Thesis-and-Presentation-templates"
 			target="_blank"
