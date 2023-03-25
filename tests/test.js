@@ -10,7 +10,7 @@ test('that the index page has headers', async ({ page }) => {
 	await expect(page.getByRole('heading', { name: 'Curriculum Vitae' })).toBeVisible();
 	await expect(page.getByRole('heading', { name: 'Thesis' })).toBeVisible();
 });
-test('that each section has some content', async ({ page }) => {
+test('that each index section has some content', async ({ page }) => {
 	await page.goto('/');
 
 	// About
@@ -33,4 +33,26 @@ test('that each section has some content', async ({ page }) => {
 
 	// Thesis
 	await expect(page.getByText('Updated April 31 2017')).toBeVisible();
+});
+test('that the programming page has headers', async ({ page }) => {
+	await page.goto('/programming');
+	await expect(page.getByRole('heading', { name: 'Programming' })).toBeVisible();
+	await expect(page.getByRole('heading', { name: 'GitHub' })).toBeVisible();
+	await expect(page.getByRole('heading', { name: 'Other' })).toBeVisible();
+});
+test('that each programming page section has some content', async ({ page }) => {
+	await page.goto('/programming');
+
+	// GitHub
+	await expect(page.getByText('My Github page can be found')).toBeVisible();
+	await expect(page.getByText('Emacs users')).toBeVisible();
+	await expect(page.getByText('There are a few fun projects')).toBeVisible();
+
+	// Other
+	await expect(page.getByText('When I have the time')).toBeVisible();
+});
+test('that each link goes to the right place', async ({ page }) => {
+	await page.goto('/');
+	await page.getByText('programming page.').click();
+	await expect(page).toHaveURL('/programming');
 });
