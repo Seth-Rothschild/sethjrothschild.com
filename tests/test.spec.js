@@ -52,7 +52,6 @@ test('that the thesis page exists', async ({ page }) => {
 	await expect(page.getByRole('heading', { name: 'Thesis' })).toBeVisible();
 });
 test('that the internal links work', async ({ page }) => {
-	
 	await page.goto('/');
 	await page.getByText('programming page.').click();
 	await expect(page).toHaveURL('/programming');
@@ -64,4 +63,4 @@ test('that the internal links work', async ({ page }) => {
 	await page.goto('/');
 	await page.getByText('PDF Version [Updated April 31 2017]', { exact: true }).click();
 	await expect(page).toHaveURL('/thesis');
-})
+});

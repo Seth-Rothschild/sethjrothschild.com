@@ -26,7 +26,6 @@ test('that each index external link goes to the right place', async ({ context, 
 		'https://math.tufts.edu/people/faculty/george-mcninch'
 	);
 	await testTargetBlank(context, page, '/', 'Tufts University', 'https://www.tufts.edu');
-
 });
 
 test('that each thesis external link goes to the right place', async ({ context, page }) => {
@@ -37,7 +36,6 @@ test('that each thesis external link goes to the right place', async ({ context,
 		'Link to PDF',
 		'https://dl.tufts.edu/concern/pdfs/bk128p04h'
 	);
-
 });
 test('that each programming external link goes to the right place', async ({ context, page }) => {
 	await testTargetBlank(
@@ -104,7 +102,6 @@ test('that each programming external link goes to the right place', async ({ con
 		'Wordle',
 		'https://github.com/Seth-Rothschild/wordle_strategy_evaluation'
 	);
-
 });
 async function testTargetBlank(context, page, start, text, end) {
 	const pagePromise = context.waitForEvent('page');

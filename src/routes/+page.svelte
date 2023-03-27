@@ -15,7 +15,8 @@
 			href="https://www.featurelabs.com/open/"
 			target="_blank"
 			rel="noopener noreferrer">Feature Labs</a
-		> where I worked on the open source project
+		>
+		where I worked on the open source project
 		<a href="https://github.com/alteryx/featuretools" target="_blank" rel="noopener noreferrer">
 			Featuretools.
 		</a>
@@ -28,7 +29,14 @@
 	<h2>Mathematics</h2>
 	<p>
 		I studied in algebraic groups over finite fields of positive characteristic. I completed my
-		Ph.D. in 2017 under <a href="https://math.tufts.edu/people/faculty/george-mcninch" target="_blank" rel="noopener noreferrer">George McNinch</a> at <a href="https://www.tufts.edu" target="_blank" rel="noopener noreferrer">Tufts University</a> in Medford, MA.
+		Ph.D. in 2017 under <a
+			href="https://math.tufts.edu/people/faculty/george-mcninch"
+			target="_blank"
+			rel="noopener noreferrer">George McNinch</a
+		>
+		at
+		<a href="https://www.tufts.edu" target="_blank" rel="noopener noreferrer">Tufts University</a> in
+		Medford, MA.
 	</p>
 	<p>
 		My thesis work involved constructing unipotent groups by group extensions, and then finding
