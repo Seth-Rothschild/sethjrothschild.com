@@ -47,6 +47,7 @@
 	<h2>Contact</h2>
 	<p>gmail: seth.j.rothschild</p>
 	<p>dell: seth.rothschild</p>
+
 	<h2>Programming</h2>
 	<p>See my <a href="/programming">programming page.</a></p>
 

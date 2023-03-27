@@ -58,4 +58,7 @@
 		>
 		that can quickly play out thousands of games according to a strategy.
 	</p>
+	<p>
+		<a href="/">&lt;Back</a>
+	</p>
 </div>

@@ -5,4 +5,5 @@
 			>Link to PDF</a
 		>
 	</p>
+	<p><a href="/">&lt;Back</a></p>
 </div>
