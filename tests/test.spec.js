@@ -66,4 +66,14 @@ test('that the internal links work', async ({ page }) => {
 
 	await page.getByText('programming', { exact: true }).click();
 	await expect(page).toHaveURL('/programming/');
+
+	// nav
+	await page.getByText('Thesis', { exact: true }).click();
+	await expect(page).toHaveURL('/thesis/');
+
+	await page.getByText('Programming', { exact: true }).click();
+	await expect(page).toHaveURL('/programming/');
+
+	await page.getByText('Home', { exact: true }).click();
+	await expect(page).toHaveURL('/');
 });
