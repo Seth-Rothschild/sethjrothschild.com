@@ -54,16 +54,16 @@ test('that the thesis page exists', async ({ page }) => {
 test('that the internal links work', async ({ page }) => {
 	await page.goto('/');
 	await page.getByText('programming page.').click();
-	await expect(page).toHaveURL('/programming');
+	await expect(page).toHaveURL('/programming/');
 	await page.getByText('<Back', { exact: true }).click();
 	await expect(page).toHaveURL('/');
 
 	await page.goto('/');
 	await page.getByText('PDF Version [Updated April 31 2017]', { exact: true }).click();
-	await expect(page).toHaveURL('/thesis');
+	await expect(page).toHaveURL('/thesis/');
 	await page.getByText('<Back', { exact: true }).click();
 	await expect(page).toHaveURL('/');
 
 	await page.getByText('programming', { exact: true }).click();
-	await expect(page).toHaveURL('/programming');
+	await expect(page).toHaveURL('/programming/');
 });
