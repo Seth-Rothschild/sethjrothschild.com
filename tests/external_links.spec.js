@@ -16,7 +16,6 @@ test('that each index external link goes to the right place', async ({ context, 
 		'Featuretools.',
 		'https://github.com/alteryx/featuretools'
 	);
-	await testTargetBlank(context, page, '/', 'Github', 'https://github.com/Seth-Rothschild');
 
 	await testTargetBlank(
 		context,
@@ -26,15 +25,30 @@ test('that each index external link goes to the right place', async ({ context, 
 		'https://math.tufts.edu/people/faculty/george-mcninch'
 	);
 	await testTargetBlank(context, page, '/', 'Tufts University', 'https://www.tufts.edu');
-});
-
-test('that each thesis external link goes to the right place', async ({ context, page }) => {
 	await testTargetBlank(
 		context,
 		page,
 		'/',
 		'Tufts Digital Library',
 		'https://dl.tufts.edu/concern/pdfs/bk128p04h'
+	);
+});
+
+test('that each footer external link goes to the right place', async ({ context, page }) => {
+	await testTargetBlank(
+		context,
+		page,
+		'/',
+		'Reddit',
+		'https://www.reddit.com/user/seth-rothschild'
+	);
+	await testTargetBlank(context, page, '/', 'Mastodon', 'https://fosstodon.org/@sethrothschild');
+	await testTargetBlank(
+		context,
+		page,
+		'/',
+		'Stack Overflow',
+		'https://stackoverflow.com/users/9458191/seth-rothschild'
 	);
 });
 test('that each programming external link goes to the right place', async ({ context, page }) => {
