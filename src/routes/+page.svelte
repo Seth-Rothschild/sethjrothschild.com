@@ -58,10 +58,15 @@
 	<p>See my <a href="/programming">programming page.</a></p>
 
 	<h2>Curriculum Vitae</h2>
-	<p>PDF Version [Updated March 2023]</p>
+	<p><a href="/seth_rothschild_resume.pdf">PDF Version [Updated March 2023]</a></p>
 
 	<h2>Thesis</h2>
-	<p><a href="/thesis">PDF Version [Updated April 31 2017]</a></p>
+	<p><a href="/seth_rothschild_thesis.pdf">PDF Version [Updated April 31 2017]</a></p>
+	<p>
+		<a href="https://dl.tufts.edu/concern/pdfs/bk128p04h" target="_blank" rel="noopener noreferrer"
+			>Tufts Digital Library</a
+		>
+	</p>
 </div>
 
 <style>

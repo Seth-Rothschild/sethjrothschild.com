@@ -32,8 +32,8 @@ test('that each thesis external link goes to the right place', async ({ context,
 	await testTargetBlank(
 		context,
 		page,
-		'/thesis',
-		'Link to PDF',
+		'/',
+		'Tufts Digital Library',
 		'https://dl.tufts.edu/concern/pdfs/bk128p04h'
 	);
 });

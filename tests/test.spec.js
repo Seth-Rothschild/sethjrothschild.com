@@ -51,10 +51,6 @@ test('that each programming page section has some content', async ({ page }) => 
 	await expect(page.getByText('Emacs users')).toBeVisible();
 	await expect(page.getByText('There are a few fun projects')).toBeVisible();
 });
-test('that the thesis page exists', async ({ page }) => {
-	await page.goto('/thesis');
-	await expect(page.getByRole('heading', { name: 'Thesis' })).toBeVisible();
-});
 test('that the internal links work', async ({ page }) => {
 	await page.goto('/');
 	await page.getByText('programming page.').click();
@@ -63,21 +59,10 @@ test('that the internal links work', async ({ page }) => {
 	await expect(page).toHaveURL('/');
 
 	await page.goto('/');
-	await page.getByText('PDF Version [Updated April 31 2017]', { exact: true }).click();
-	await expect(page).toHaveURL('/thesis/');
-	await page.getByText('<Back', { exact: true }).click();
-	await expect(page).toHaveURL('/');
-
 	await page.getByText('programming', { exact: true }).click();
 	await expect(page).toHaveURL('/programming/');
 
 	// nav
-	await page.getByText('Thesis', { exact: true }).click();
-	await expect(page).toHaveURL('/thesis/');
-
-	await page.getByText('Programming', { exact: true }).click();
-	await expect(page).toHaveURL('/programming/');
-
 	await page.getByText('Home', { exact: true }).click();
 	await expect(page).toHaveURL('/');
 });
