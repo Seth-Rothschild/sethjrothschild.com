@@ -1,31 +1,37 @@
 <div class="content">
 	<h1>Home</h1>
-	<h2>About</h2>
-	<p>
-		I am a Research and Development Software Engineer in the Dell Technologies Office of the CTO
-		Dojo. We research emerging technologies and build prototypes to serve as proofs of concept. I'm
-		an evangelist of <a
-			href="https://en.wikipedia.org/wiki/Extreme_programming"
-			target="_blank"
-			rel="noopener noreferrer">Extreme Programming</a
-		> practices which we follow, so feel free to contact me if you want to learn more!
-	</p>
-	<p>
-		Prior to working at Dell I was a Research Scientist at <a
-			href="https://www.featurelabs.com/open/"
-			target="_blank"
-			rel="noopener noreferrer">Feature Labs</a
-		>
-		where I worked on the open source project
-		<a href="https://github.com/alteryx/featuretools" target="_blank" rel="noopener noreferrer">
-			Featuretools.
-		</a>
-		You can also check my
-		<a href="https://github.com/Seth-Rothschild" target="_blank" rel="noopener noreferrer">Github</a
-		>
-		page for a nice cross section of my interests, or the
-		<a href="/programming">programming</a> page on the sidebar.
-	</p>
+	<div class="flex">
+		<div class="column">
+			<h2>About</h2>
+			<p>
+				I am a Research and Development Software Engineer in the Dell Technologies Office of the CTO
+				Dojo. We research emerging technologies and build prototypes to serve as proofs of concept.
+				I'm an evangelist of <a
+					href="https://en.wikipedia.org/wiki/Extreme_programming"
+					target="_blank"
+					rel="noopener noreferrer">Extreme Programming</a
+				> practices which we follow, so feel free to contact me if you want to learn more!
+			</p>
+			<p>
+				Prior to working at Dell I was a Research Scientist at <a
+					href="https://www.featurelabs.com/open/"
+					target="_blank"
+					rel="noopener noreferrer">Feature Labs</a
+				>
+				where I worked on the open source project
+				<a href="https://github.com/alteryx/featuretools" target="_blank" rel="noopener noreferrer">
+					Featuretools.
+				</a>
+				You can also check my
+				<a href="https://github.com/Seth-Rothschild" target="_blank" rel="noopener noreferrer"
+					>Github</a
+				>
+				page for a nice cross section of my interests, or the
+				<a href="/programming">programming</a> page on the sidebar.
+			</p>
+		</div>
+		<img alt="Seth Rothschild" src="headshot.jpg" height="200px" />
+	</div>
 	<h2>Mathematics</h2>
 	<p>
 		I studied in algebraic groups over finite fields of positive characteristic. I completed my
@@ -57,3 +63,23 @@
 	<h2>Thesis</h2>
 	<p><a href="/thesis">PDF Version [Updated April 31 2017]</a></p>
 </div>
+
+<style>
+	.flex {
+		display: flex;
+	}
+	.column {
+		min-width: 300px;
+	}
+	img {
+		float: right;
+		margin-left: 15px;
+		margin-top: 25px;
+		margin-right: 10px;
+	}
+	@media screen and (max-width: 700px) {
+		img {
+			width: 0%;
+		}
+	}
+</style>

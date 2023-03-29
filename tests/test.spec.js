@@ -34,6 +34,10 @@ test('that each index section has some content', async ({ page }) => {
 	// Thesis
 	await expect(page.getByText('Updated April 31 2017')).toBeVisible();
 });
+test('that there is an image on index', async ({ page }) => {
+	await page.goto('/');
+	await expect(page.getByAltText('Seth Rothschild')).toBeVisible();
+});
 test('that the programming page has headers', async ({ page }) => {
 	await page.goto('/programming');
 	await expect(page.getByRole('heading', { name: 'Programming' })).toBeVisible();
